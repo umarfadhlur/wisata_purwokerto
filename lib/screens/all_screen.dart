@@ -48,9 +48,10 @@ class _AllScreenState extends State<AllScreen> {
                 ),
               ),
               Container(
-                height: 400,
+                height: 500,
                 margin: EdgeInsets.only(top: 16.0),
                 child: ListView.separated(
+                  physics: BouncingScrollPhysics(),
                   separatorBuilder: (context, index) {
                     return Divider(
                       height: 15.0,
@@ -71,8 +72,8 @@ class _AllScreenState extends State<AllScreen> {
                       child: Stack(
                         children: <Widget>[
                           Positioned(
-                            bottom: 19.2,
-                            left: 19.2,
+                            bottom: 5.0,
+                            left: 5.0,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(4.8),
                               child: BackdropFilter(
