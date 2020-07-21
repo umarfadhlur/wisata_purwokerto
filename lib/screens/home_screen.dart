@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wisata_purwokerto/models/popular_model.dart';
+import 'package:wisata_purwokerto/screens/all_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -22,12 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               Container(
                 height: 57.6,
-                margin: EdgeInsets.only(top: 28.8, left: 28.8, right: 28.8),
+                margin: EdgeInsets.only(top: 28.8, left: 20.0, right: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Icon(Icons.menu),
-                    Icon(Icons.search),
+                    IconButton(
+                      icon: Icon(Icons.menu),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {},
+                    ),
                   ],
                 ),
               ),
@@ -55,7 +62,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: GoogleFonts.quicksand(
                             fontSize: 12, fontWeight: FontWeight.w700),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AllScreen()),
+                        );
+                      },
                     ),
                   ],
                 ),
